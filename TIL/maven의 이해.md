@@ -159,13 +159,7 @@
             <artifactId>mybatis-spring</artifactId>
             <version>1.3.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
-            <version>1.2.2</version>
-        </dependency>
-        </dependencies>
+    </dependencies>
 	
 	<!-- 플러그인 저장소 설정 -->
 	<!-- 플러그인을 사용하고자 하는 경우 해당 프럴그인이 저장되어 있는 저장소를 포함시킨다. -->
