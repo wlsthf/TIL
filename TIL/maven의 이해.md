@@ -204,8 +204,10 @@
 		</plugins>
 	</reporting>
 	
-	<!-- 프로파일 설정
-			환경에 다라 세팅ㅇ르 다르게 할 필요가 있을 때 사용한다. 가령 local 환경과 서버 환경에서의 배포 경로를 다르게 한다거나, 테스트를 하려는 경우 maven.test.skip 변수를 false로 지정한다는 등의 세팅이 가능하다. mvn -Plocal처럼 메이븐 실행시 프로파일 선택이 가능하다. -->
+<!-- 프로파일 설정
+	환경에 다라 세팅을 다르게 할 필요가 있을 때 사용한다. 가령 local 환경과 서버 환경에서의
+ 배포 경로를 다르게 한다거나, 테스트를 하려는 경우 maven.test.skip 변수를 false로 지정한다는 
+등의 세팅이 가능하다. mvn -Plocal처럼 메이븐 실행시 프로파일 선택이 가능하다. -->
 	<profiles>
 		<profile>
 			<id>local</id>
@@ -241,7 +243,9 @@
 		
 		<!-- 플러그인 설정 -->
 		<plugins>
-<!-- maven-resources-plugin을 사용하면 ,필터링 사용이 가능한데 아래에서는 filtering이 true인 경우 해당 프로파일에 설정된 변수인 "env"의 경로에 있는 리소스를 사용하게 된다. 이를 활용해 환경에 따라 다른  DB를 보게하거나, 로그 출력 방식을(에러 레벨) 다르게 잡을 수 있다. -->
+<!-- maven-resources-plugin을 사용하면 ,필터링 사용이 가능한데 아래에서는 filtering이 true인 경우
+해당 프로파일에 설정된 변수인 "env"의 경로에 있는 리소스를 사용하게 된다. 이를 활용해 환경에 따라
+다른  DB를 보게하거나, 로그 출력 방식을(에러 레벨) 다르게 잡을 수 있다. -->
 			<plugin>	
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -255,7 +259,10 @@
 				</configuration>
 			</plugin>	
 			
-<!-- maven-clean-plugin 사용 목적은 빌드시 생성되는 파일들을 지우는 것이다. clean gaol실행시, 디폴트로 project.build.directory, project.build.outputDirectory, project.build.outputDirectory, project.build.testOutputDirectory, project.reporting.outputDirectory를 삭제한다. 추가적으로 아래에 filesets 설정을 통해 삭제 대상 추가 및 제외가 가능하다 -->
+<!-- maven-clean-plugin 사용 목적은 빌드시 생성되는 파일들을 지우는 것이다. clean gaol실행시, 디폴트로 
+project.build.directory, project.build.outputDirectory, project.build.outputDirectory, 
+project.build.testOutputDirectory, project.reporting.outputDirectory를 삭제한다.
+추가적으로 아래에 filesets 설정을 통해 삭제 대상 추가 및 제외가 가능하다 -->
 			<plugin>
 				<artifactId>mavenn-clean-plugin</artifactId>
 				<version>2.5</version>
@@ -293,9 +300,9 @@
 				</configuration>
 			</plugin>
 			
-			<!-- maven-war-plugin은 package 실행시 war 파일을 생성하는 과정을 관장한다.
-				아래의 설정을 통해 webResources>reource>directory의 파일들을 targetPath인 WEB-INF 디렉토리에 복사한다 -->
-			<plugin>
+<!-- maven-war-plugin은 package 실행시 war 파일을 생성하는 과정을 관장한다.
+아래의 설정을 통해 webResources>reource>directory의 파일들을 targetPath인 WEB-INF 디렉토리에 복사한다 -->
+            <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
@@ -353,7 +360,8 @@
 			</resource>
 		</resources>	
 		
-		<!-- maven-resources-plugin을 적용하고, 아래의 필터를 적용하면 빌드 시점에 <resource>중 필터링 true인 것들을 대상으로 ${..}변수를 찾아 할당하게 된다. -->
+		<!-- maven-resources-plugin을 적용하고, 아래의 필터를 적용하면 빌드 시점에 <resource>중 
+필터링 true인 것들을 대상으로 ${..}변수를 찾아 할당하게 된다. -->
 		<filters>
 			<filter>src/main/resources-${env}/build.properties</filter>
 		</filters>
