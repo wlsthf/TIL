@@ -40,7 +40,7 @@
     </style>
 
     <script>
-        //세션에 쿠키
+        //세션에 쿠키 설정*
         function setCookie(name, value, expiredays) {
             var todayDate = new Date();
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
 });
 
-
+// 쿠키에 따른 팝업창 노출여부
 cookieData = document.cookie;
 if(cookieData.indexOf("mainDiv = done") < 0) {
     $("#popUp2").hide();
