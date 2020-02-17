@@ -22,23 +22,41 @@
 
 ### 학습 계획
 
-- ##### ~~진행하던 신기술 공부 끝내기(springboot, JPA)~~
+- ##### ~~진행하던 신기술 공부 끝내기(springboot, JPA,gradle)~~
 
   - ###### ~~스프링 부트 책 끝내기~~
 
   - ###### 할 수 있는 시간이 적을 때 틈틈히 복습
 
-- ##### 당장 사용하는 프레임워크 친숙해지기(spring, 자사 framework)
+- ##### 당장 사용하는 프레임워크 친숙해지기(spring)
 
-  - ###### 스프링 핵심노트_Madhusudban Konda (스프링부터 확실히 공부)
+  - ###### 스프링 핵심노트_Madhusudban Konda (읽기... )
 
-  - ###### 스프링 인티그레이션 핵심노트, 스프링 데이터 핵심노트 -> 일단 스프링 핵심노트 끝내고 고려
+  - ###### Springboot로 구축해보기 (myBatis, tiles, gradle)
 
 - ##### 자바의 장점을 살릴 수 있는 디자인 패턴 공부하기
 
   - ###### 객체 지향과 디자인 패턴_최범균
 
   - ###### Java 언어로 배우는 디자인 패턴 입문_Yuki Hiroshi
+
+    
+
+- ##### 나만의 start structure? 구성
+
+  - ###### jpa(CUD) & mybatis(R)
+
+  - ###### 바로 찾아쓸 수 있는 API 만들기
+
+- ##### 토이프로젝트
+
+  - 기술 블로그? (각종 api, 나만의 start structure 소개..?)
+
+  - ###### web application for something... 
+
+
+
+
 
 - ##### 알고리즘 공부
 
