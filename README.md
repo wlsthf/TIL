@@ -32,8 +32,6 @@
 
   - ###### 스프링 핵심노트_Madhusudban Konda (읽기... )
 
-  - ###### Spring으로 구축해보기 (myBatis, tiles, maven)
-
 - ##### 자바의 장점을 살릴 수 있는 디자인 패턴 공부하기
 
   - ###### 객체 지향과 디자인 패턴_최범균
@@ -50,7 +48,7 @@
 
 - ##### 토이프로젝트
 
-  - 기술 블로그? (각종 api, 나만의 start structure 소개..?)
+  - ###### 기술 블로그? (각종 api, 나만의 start structure 소개..?)
 
   - ###### web application for something... 
 
