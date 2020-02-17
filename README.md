@@ -32,7 +32,7 @@
 
   - ###### 스프링 핵심노트_Madhusudban Konda (읽기... )
 
-  - ###### Springboot로 구축해보기 (myBatis, tiles, gradle)
+  - ###### Spring으로 구축해보기 (myBatis, tiles, maven)
 
 - ##### 자바의 장점을 살릴 수 있는 디자인 패턴 공부하기
 
@@ -44,9 +44,9 @@
 
 - ##### 나만의 start structure? 구성
 
-  - ###### jpa(CUD) & mybatis(R)
+  - ###### springboot + jpa(CUD) & mybatis(R) + some template + ...
 
-  - ###### 바로 찾아쓸 수 있는 API 만들기
+  - ###### 바로 바로 찾아서 쓸 수 있는 API 만들기
 
 - ##### 토이프로젝트
 
