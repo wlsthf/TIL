@@ -18,7 +18,7 @@
 			<if test="idx != null and idx != ''">
 				idx,
 			</if>
-			col_
+				col_
         	<if test="col_2 != null and col_2 != ''">
 				, col_2
 			</if>	
@@ -31,7 +31,7 @@
 			<if test="idx != null and idx != ''">
 				#{idx},
 			</if>
-			#{col_1}
+				#{col_1}
 			<if test="col_3 != null and col_3 != ''">
 				, #{col_2}
 			</if>
