@@ -46,7 +46,7 @@ List<Map> list		= (List)request.getAttribute("list");
                     <%=nvl(map,"col_3")%>
                 </td>
                 <th>
-                    <input type="button" value="삭제" class="btn04 delRowData" onclick="delRowAjax(<%=nvl(map, "record_id")%>, <%=nvl(map, "row_no")%>)">
+                    <input type="button" value="삭제" class="delRowData" onclick="delRowAjax(<%=nvl(map, "record_id")%>, <%=nvl(map, "row_no")%>)">
                 </th> 
             </tr>
 <%
