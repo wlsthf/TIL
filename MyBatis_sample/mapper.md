@@ -18,7 +18,7 @@
 			<if test="idx != null and idx != ''">
 				idx,
 			</if>
-				col_
+				col_1
         	<if test="col_2 != null and col_2 != ''">
 				, col_2
 			</if>	
@@ -57,14 +57,11 @@
 		ORDER BY idx;			
 	</select>    
     
-    <update id="localCivilComplaintPopupModify" parameterType="caseMap">
-		UPDATE tbl_mdata_record_DATA
+    <update id="tablepModify" parameterType="caseMap">
+		UPDATE tbl
 		<set><if test="column_name == 'col_0'">col_0 = #{data}</if></set>
 		<set><if test="column_name == 'col_2'">col_2 = #{data}</if></set>
-		<set><if test="column_name == 'col_3'">col_3 = #{data}</if></set>
-		<set><if test="column_name == 'col_4'">col_4 = #{data}</if></set>
-		<set><if test="column_name == 'col_5'">col_5 = #{data}</if></set>
-		<set><if test="column_name == 'col_6'">col_6 = #{data}</if></set>		
+		<set><if test="column_name == 'col_3'">col_3 = #{data}</if></set>	
 		WHERE idx = #{idx};
 	</update>
     
