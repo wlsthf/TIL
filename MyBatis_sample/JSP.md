@@ -2,8 +2,8 @@
 
 ```jsp
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@page extends="kr.go.moel.efboard.web.admin.util.BasePage" %>
-<%@page import="kr.go.moel.efboard.web.admin.controller.base.BaseController"%>
+<%@page extends="BasePage" %>
+<%@page import="controller.base.BaseController"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@page import="java.util.*"%>
 
@@ -36,13 +36,13 @@ List<Map> list		= (List)request.getAttribute("list");
 %>
 			<tr>
             	<input type="hidden" name="idx" value="<%=nvl(map, "idx")%>">
-                <td onclick="modifyData(<%=nvl(map, "id")%>, 'col_1', <%=nvl(map, "col_1") %>">
+                <td onclick="modifyData(<%=nvl(map, "idx")%>, 'col_1', <%=nvl(map, "col_1") %>">
                     <%=nvl(map,"col_1")%>
                 </td>
-                <td onclick="modifyData(<%=nvl(map, "id")%>, 'col_2', <%=nvl(map, "col_2") %>">
+                <td onclick="modifyData(<%=nvl(map, "idx")%>, 'col_2', <%=nvl(map, "col_2") %>">
                     <%=nvl(map,"col_2")%>
                 </td>
-                <td onclick="modifyData(<%=nvl(map, "id")%>, 'col_3', <%=nvl(map, "col_3") %>">
+                <td onclick="modifyData(<%=nvl(map, "idx")%>, 'col_3', <%=nvl(map, "col_3") %>">
                     <%=nvl(map,"col_3")%>
                 </td>
                 <th>

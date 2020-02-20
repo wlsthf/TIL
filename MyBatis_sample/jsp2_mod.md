@@ -2,11 +2,11 @@
 
 # JSP_mod
 
-```
+```jsp
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@page extends="kr.go.moel.efboard.web.admin.util.BasePage" %>
+<%@page extends="BasePage" %>
 
-<%@page import="kr.go.moel.efboard.web.admin.controller.base.BaseController"%>
+<%@page import="controller.base.BaseController"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -39,7 +39,7 @@ $(function() {
 
 <div>
 	<form method="post" id="modify_form">
-		<input type="hidden" name="record_id" value="${param.record_id}">
+		<input type="hidden" name="idx" value="${param.idx}">
 		<input id="modifyData" name="data" value="${param.data}"/>
 		<input type="button" id="submit" value="수정">
 	</form>			
