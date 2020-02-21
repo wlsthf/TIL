@@ -191,8 +191,8 @@ public class RestAPITestController {
 	@RequestMapping(value =”/test”,method = RequestMethod.GET)
 	public @ResponseBody RestTest testRestAPI(){
 		RestTest test new RestTest(); //VO
-		test.setName(”KMS”);
-		test.setAge(25);
+		test.setName(”KYS”);
+		test.setAge(4);
 		test.setCurrentTime(LocalDateTime.now().toString());
 		return test;
 	}
