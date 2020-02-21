@@ -35,7 +35,6 @@ List<Map> list		= (List)request.getAttribute("list");
                     Map map = list.get(i);
 %>
 			<tr>
-            	<input type="hidden" name="idx" value="<%=nvl(map, "idx")%>">
                 <td onclick="modifyData(<%=nvl(map, "idx")%>, 'col_1', <%=nvl(map, "col_1") %>">
                     <%=nvl(map,"col_1")%>
                 </td>
@@ -53,7 +52,20 @@ List<Map> list		= (List)request.getAttribute("list");
 			}
 		}
 %>
-
+            <tr>
+            	<td>번호</td>
+                <td>
+                    <input type="text" name="col_1">
+                </td>
+                <td>
+                    <input type="text" name="col_2">
+                </td>
+                <td>
+                    <input type="text" name="col_3">
+                </td>
+                <td></td>
+            </tr>
+	
 	</table>
 </form>
 
