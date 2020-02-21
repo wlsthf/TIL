@@ -2,29 +2,29 @@
 
 ```java
 @Controller
-@RequestMapping(value="/civilComplaintData/")
-public class CivilComplaintDataController  extends BaseController {
+@RequestMapping(value="/jsp/")
+public class TableController  extends BaseController {
     
 	@Autowired ExceptionManager exceptionManager;
-	@Autowired CivilComplaintDataService civilComplaintDataService; 
+	@Autowired TableService tableService; 
     
-    /*팝업 리스트 > 지방관서별 민원 처리 현황*/
-	@RequestMapping(value="/localCivilComplaintPopup" , method=RequestMethod.GET)
-	public String localCivilComplaintPopup (Model model) throws Exception{		
+
+	@RequestMapping(value="/jsp" , method=RequestMethod.GET)
+	public String jsp (Model model) throws Exception{		
 			Map parameter = getParameterMap(); //웹파라미터	
-			Map resultMap = civilComplaintDataService.localCivilComplaintPopup(parameter);
+			Map resultMap = TableService.jsp(parameter);
 			model.addAttribute("list", resultMap.get("list"));
-			return "civilComplaintData/localCivilComplaintPopup.empty";
+			return "jsp";
 	}
     
-    /*팝업 데이터 하나 가져오기 > 지방관서별 민원 처리 현황*/
-	@RequestMapping(value="/localCivilComplaintPopupModify" , method=RequestMethod.GET)
-	public String localCivilComplaintPopupModify (Model model)
+
+	@RequestMapping(value="/jsp2_mod" , method=RequestMethod.GET)
+	public String tableModify (Model model)
 			throws Exception {
 
 		Map parameter = getParameterMap(); //웹파라미터
 
-		Map resultMap = civilComplaintDataService.localCivilComplaintPopupSelectBox(parameter);
+
 		
 		model.addAttribute("list", resultMap.get("localcivilcomplaintpopupselectbox"));
 
