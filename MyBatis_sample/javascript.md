@@ -1,22 +1,34 @@
 # javascript
 
 ```javascript
-// 데이터 변경
-function modifyData(idx, column_name, data){
-	
-	var popUrl = 'tableModify?idx='+idx+'&row_no='+row_no+'&data='+data+'&column_name='+column_name;	
-	
-	var offset = $("#regist_form").offset();
-	
-	var top = offset.top;
-	var left = offset.left;
-	
-	var popOption = "width=350, height=110, top="+top+", left="+left+", resizable=yes, scrollbars=yes, status=no, menubar=no, toolbar=no, location=no;";    //팝업창 옵션(optoin)
-	
-	chkPopup = window.open(popUrl,"y",popOption);	
-}
-
 $(function(){
+// 데이터 변경
+    function modifyData(idx, column_name, data){
+
+        var popUrl = 'tableModify?idx='+idx+'&row_no='+row_no+'&data='+data+'&column_name='+column_name;	
+
+        var offset = $("#regist_form").offset();
+
+        var top = offset.top;
+        var left = offset.left;
+
+        var popOption = "width=350, height=110, top="+top+", left="+left+", resizable=yes, scrollbars=yes, status=no, menubar=no, toolbar=no, location=no;";    //팝업창 옵션(optoin)
+
+        chkPopup = window.open(popUrl,"y",popOption);	
+    }
+    
+    //창 닫음
+    $("#bt_submit").click(function(){
+
+	    	$("#modify_form").attr("action", "localCivilComplaintPopupModify");
+	    	$("#modify_form").submit();
+	    	
+	    	window.opener.location.reload();
+	    	window.close();
+    
+    });
+
+
     // 데이터 등록
     $("#regist_btn").click(function(){
 		if(confirm('등록 하시겠습니까?')) {

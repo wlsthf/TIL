@@ -2,42 +2,28 @@
 
 ```java
 @Controller
-@RequestMapping(value="/jsp/")
+@RequestMapping(value="/table/")
 public class TableController  extends BaseController {
     
 	@Autowired ExceptionManager exceptionManager;
 	@Autowired TableService tableService; 
     
 
-	@RequestMapping(value="/jsp" , method=RequestMethod.GET)
+	@RequestMapping(value="/tableSelect" , method=RequestMethod.GET)
 	public String jsp (Model model) throws Exception{		
 			Map parameter = getParameterMap(); //웹파라미터	
-			Map resultMap = TableService.jsp(parameter);
+			Map resultMap = TableService.tableSelect(parameter);
 			model.addAttribute("list", resultMap.get("list"));
-			return "jsp";
+			return "tableSelect";
 	}
     
-
-	@RequestMapping(value="/jsp2_mod" , method=RequestMethod.GET)
-	public String tableModify (Model model)
-			throws Exception {
-
-		Map parameter = getParameterMap(); //웹파라미터
-
-
-		
-		model.addAttribute("list", resultMap.get("localcivilcomplaintpopupselectbox"));
-
-		return "civilComplaintData/localCivilComplaintPopupModify.empty";
-	}
-	
-	/*팝업 데이터 수정 > 지방관서별 민원 처리 현황*/
-	@RequestMapping(value="/localCivilComplaintPopupModify", method=RequestMethod.POST)
-	public ModelAndView localCivilComplaintPopupModify(
+    
+	@RequestMapping(value="/tableModify", method=RequestMethod.POST)
+	public ModelAndView tableModify(
 				ModelAndView mav,
 				@RequestParam Map<String,Object> parameter
 			) throws Exception{
-		Map resultMap = civilComplaintDataService.localCivilComplaintPopupModify(parameter);
+		Map resultMap = TableService.tableModify(parameter);
 		String msg = "";
 		if(resultMap.get("resultCode").equals("OK")){
 			msg="수정이 완료되었습니다.";
@@ -47,32 +33,27 @@ public class TableController  extends BaseController {
 
 		//MODEL에 WEB FLOW 처리 등록	
 		mav.addObject(ModelKeyEnum.WEB_FLOW_TWIST.toString() ,
-				WebFlowTwistUtility.getInstance(WebFlowTwistBean.NextActionType.ALERT_AND_MOVE_URL, msg, ""));		
+				WebFlowTwistUtility.getInstance(WebFlowTwistBean.NextActionType.ALERT_AND_MOVE_URL, msg, "");		
 
 		return mav;
 	}
     
-    /*팝업 등록 > 지방관서별 민원 처리 현황*/
-	@RequestMapping(value="/localCivilComplaintPopupRegist",method=RequestMethod.POST)
-	public ModelAndView localCivilComplaintPopupRegist(
+    
+	@RequestMapping(value="/tableRegist",method=RequestMethod.POST)
+	public ModelAndView tableRegist(
 				ModelAndView mav,
-				@RequestParam("row_no") String row_no[],				
-				@RequestParam("cv_note") String col_0[],
-				@RequestParam("cv_value")String col_2[],
-				@RequestParam("col_3")String col_3[],
-				@RequestParam("col_4")String col_4[],
-				@RequestParam("col_5")String col_5[],
-				@RequestParam("col_6")String col_6[]		
+				@RequestParam("idx") String row_no[],				
+				@RequestParam("col_1")String col_3[],
+				@RequestParam("col_2")String col_4[],
+				@RequestParam("col_3")String col_5[]		
 			) throws Exception{
 		Map parameter = new CaseInsensitiveMap();
-		parameter.put("row_no", row_no);
-		parameter.put("col_0" , col_0);
+		parameter.put("idx", idx);
+        parameter.put("col_1" , col_1);
 		parameter.put("col_2" , col_2);
 		parameter.put("col_3" , col_3);
-		parameter.put("col_4" , col_4);
-		parameter.put("col_5" , col_5);
-		parameter.put("col_6" , col_6);
-		Map resultMap = civilComplaintDataService.localCivilComplaintPopupRegist(parameter);
+		
+		Map resultMap = TableService.tableRegist(parameter);
 		
 		String msg = "";
 		if(resultMap.get("resultCode").equals("OK")){
@@ -83,32 +64,26 @@ public class TableController  extends BaseController {
 		
 		//MODEL에 WEB FLOW 처리 등록	
 				mav.addObject(ModelKeyEnum.WEB_FLOW_TWIST.toString() ,
-						WebFlowTwistUtility.getInstance(WebFlowTwistBean.NextActionType.ALERT_AND_MOVE_URL, msg, "localCivilComplaintPopup"));		
+						WebFlowTwistUtility.getInstance(WebFlowTwistBean.NextActionType.ALERT_AND_MOVE_URL, msg, "tableSelect" + parameter.get("idx")));		
 				
 		return mav;
 	}
     
-    /*지방관서 select box ajax*/
-    @RequestMapping(value="/localCivilComplaintPopupSelectBox" , method=RequestMethod.GET)   
-    public String localCivilComplaintPopupSelectBox (Model model) throws Exception{
-        Map parameter = getParameterMap(); //웹파라미터  
-        Map resultMap = civilComplaintDataService.localCivilComplaintPopupSelectBox(parameter);
-        model.addAttribute("jsonDataMap" , resultMap.get("localcivilcomplaintpopupselectbox"));
-        return "jsonFromMapStandardView"; //json 출력 view로 리턴
-    }
     
-    /*팝업 삭제 > 지방관서별 민원 처리 현황*/
-	@RequestMapping(value="/localCivilComplaintPopupDelete" , method=RequestMethod.GET)
-	public String localCivilComplaintPopupDelete (Model model, @RequestParam Map<String, Object> parameter) throws Exception{		
-			Map resultMap = civilComplaintDataService.localCivilComplaintPopupDelete(parameter);
+
+	@RequestMapping(value="/tableDelete" , method=RequestMethod.GET)
+	public String tableDelete (Model model, @RequestParam Map<String, Object> parameter) throws Exception{		
+			Map resultMap = TableService.tableDelete(parameter);
 
 			String msg = "";
 
 			if(resultMap.get("resultCode").equals("OK")) 
 				msg = "삭제되었습니다."; 
 			else msg = "삭제가 실패하였습니다.";
+        
 			model.addAttribute("msg",msg);
-			return "civilComplaintData/localCivilComplaintPopup.empty";
+        
+			return "table/tableSelect";
 	}
     
     
