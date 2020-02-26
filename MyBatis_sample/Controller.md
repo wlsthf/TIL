@@ -13,7 +13,9 @@ public class TableController  extends BaseController {
 	public String jsp (Model model) throws Exception{		
 			Map parameter = getParameterMap(); //웹파라미터	
 			Map resultMap = TableService.tableSelect(parameter);
+        
 			model.addAttribute("list", resultMap.get("list"));
+        
 			return "tableSelect";
 	}
     
@@ -24,7 +26,9 @@ public class TableController  extends BaseController {
 				@RequestParam Map<String,Object> parameter
 			) throws Exception{
 		Map resultMap = TableService.tableModify(parameter);
+        
 		String msg = "";
+        
 		if(resultMap.get("resultCode").equals("OK")){
 			msg="수정이 완료되었습니다.";
 		}else{
@@ -48,11 +52,14 @@ public class TableController  extends BaseController {
 				@RequestParam("col_3")String col_5[]		
 			) throws Exception{
 		Map parameter = new CaseInsensitiveMap();
+        
 		parameter.put("idx", idx);
         parameter.put("col_1" , col_1);
 		parameter.put("col_2" , col_2);
 		parameter.put("col_3" , col_3);
 		
+        // 여려행을 넣는방식에서 사용.. 그냥 써도 바로 넘겨도됨
+        
 		Map resultMap = TableService.tableRegist(parameter);
 		
 		String msg = "";
@@ -84,10 +91,7 @@ public class TableController  extends BaseController {
 			model.addAttribute("msg",msg);
         
 			return "table/tableSelect";
-	}
-    
-    
-    
+	}       
 }
 ```
 

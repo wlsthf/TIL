@@ -3,9 +3,7 @@
 ```java
 @Service
 public class TableImpl implements TableService {
-	
-	
-	
+
 	@Autowired DbmsAdapter dbmsAdapter_backend ;
 	@Autowired ExceptionManager exceptionManager;
 	@Autowired ManageDataService manageDataService;
