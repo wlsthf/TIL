@@ -1,4 +1,4 @@
-# EXISTS, NOT EXISTS - SQL조건 연산자
+# SQL ) EXISTS, NOT EXISTS 
 
 ###### EXISTS : 서브 쿼리가 적어도 하나의 행을 돌려주면 TRUE가 된다.
 
