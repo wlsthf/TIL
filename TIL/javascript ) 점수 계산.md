@@ -16,8 +16,6 @@ $(function(){
 		//alert("총점은 : " + total);			
 		var score = Number($this.val());											
 		//alert("입력한 점수는 : " + score);					
-		var test = isNaN(score);													
-		//alert("숫자가 아닙니까 : " + test);
 		var maxScore = Number($this.parent().siblings().eq(1).text().substr(0,2));	
 		//alert("입력한 점수의 최대 점수는 : " + maxScore);
 		var item = $this.parent().siblings().eq(0).text();							
@@ -26,7 +24,7 @@ $(function(){
 		//alert("평가항목의 갯수 : "scoreCnt);
 		
 		// 숫자 검사
-		if(test) {
+		if(isNaN(score)) {
 			alert("숫자를 입력해주세요.");
 			$this.val("");
 			$this.focus();
