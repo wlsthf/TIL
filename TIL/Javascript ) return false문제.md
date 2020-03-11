@@ -47,7 +47,6 @@ $("#아이디").click(function() {
 
 ```javascript
 $("#아이디").click(function() {
-	var booleanResult = true;
     var resultCnt = $(".여러개").length;
     
     for(var i = 0; i < resultCnt; i++) {
@@ -58,26 +57,22 @@ $("#아이디").click(function() {
         if(resultCnt.length > maxCnt) {
             alsert("글자 수를 초과하였습니다.");
             $(this).focus();
-            booleanResult = false;
             return false;
         } else if(resultCnt.length == 0 || resultCnt.length == "") {
             alsert("글을 입력해주세요.");
             $(this).focus();
-            booleanResult = false;
             return false;
         } else if(resultCnt.length < 50) {
             alsert("50자이상 입력해주세요");
             $(this).focus();
-            booleanResult = false;
             return false;
         }
-    }
-    
-     if(!booleanResult) retrun false;
-    
+    }    
 });
 ```
 
-###### each와 마찬가지.
+###### each와 다르게 retrun false하면 바로 빠져 나가진다.
 
-###### $this를 선언해서 $(this) 처럼 사용하면 덜 헷깔린다. 
+
+
+###### $this를 선언해서 $(this) 처럼 사용하면 덜 헷깔린다.  => 선택자는 $붙여서 구분해보자
