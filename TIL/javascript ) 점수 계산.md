@@ -1,6 +1,6 @@
 # javascript ) 점수 계산
 
-##### javascript
+##### javascript (for문 사용)
 
 ```javascript
 $(function(){
@@ -20,7 +20,8 @@ $(function(){
 		//alert("입력한 점수의 최대 점수는 : " + maxScore);
 		var item = $this.parent().siblings().eq(0).text();							
 		//alert("항목의 이름 : " + item);
-		var scoreCnt = $("#" + type + " tr").length -3; 	//점수가 들어가는 tr 이외의 tr제외	
+        var $scores = $("." + type);
+		var scoreCnt = $scores.length;
 		//alert("평가항목의 갯수 : "scoreCnt);
 		
 		// 숫자 검사
@@ -46,8 +47,8 @@ $(function(){
 		
  		total = 0;
  		
-		for (var i = 1; i <= scoreCnt; i++) {
-			var sum = Number($("#" + type + "_" + i).val());								
+		for (var i = 0; i < scoreCnt; i++) {
+			var sum = Number($scores.eq(i).val());								
 			//console.log(i + "번째 값 : " + sum);
 			
 			total += sum
@@ -81,7 +82,7 @@ HTML
             <td>10점</td>
             <td>항목1의 설명입니다.</td>
             <td>
-                <input type="text" id="docEv_1"/><span>10</span>			
+                <input type="text" class="docEv"/><span>10</span>			
             </td>
         </tr>
         <tr>
@@ -89,7 +90,7 @@ HTML
             <td>30점</td>
             <td>항목2의 설명입니다.</td>
             <td>
-                <input type="text" id="docEv_2"/><span>30</span>			
+                <input type="text" class="docEv"/><span>30</span>			
             </td>
         </tr>
         <tr>
@@ -97,7 +98,7 @@ HTML
             <td>20점</td>
             <td>항목3의 설명입니다.</td>
             <td>
-                <input type="text" id="docEv_3"/><span>20</span>			
+                <input type="text" class="docEv"/><span>20</span>			
             </td>
         </tr>
         <tr>
@@ -105,7 +106,7 @@ HTML
             <td>20점</td>
             <td>항목4의 설명입니다.</td>
             <td>
-                <input type="text" id="docEv_4"/><span>20</span>			
+                <input type="text" class="docEv"/><span>20</span>			
             </td>
         </tr>
         <tr>
@@ -113,7 +114,7 @@ HTML
             <td>20점</td>
             <td>항목5의 설명입니다.</td>
             <td>
-                <input type="text" id="docEv_5"/><span>20</span>			
+                <input type="text" class="docEv"/><span>20</span>			
             </td>
         </tr>
         <tr>
@@ -149,7 +150,7 @@ HTML
             <td>10점</td>
             <td>항목1의 설명입니다.</td>
             <td>
-                <input type="text" id="ptEv_1"/><span>10</span>			
+                <input type="text" class="ptEv"/><span>10</span>			
             </td>
         </tr>
         <tr>
@@ -157,7 +158,7 @@ HTML
             <td>30점</td>
             <td>항목2의 설명입니다.</td>
             <td>
-                <input type="text" id="ptEv_2"/><span>30</span>			
+                <input type="text" class="ptEv"/><span>30</span>			
             </td>
         </tr>
         <tr>
@@ -165,7 +166,7 @@ HTML
             <td>20점</td>
             <td>항목3의 설명입니다.</td>
             <td>
-                <input type="text" id="ptEv_3"/><span>20</span>			
+                <input type="text" class="ptEv"/><span>20</span>			
             </td>
         </tr>
         <tr>
@@ -173,7 +174,7 @@ HTML
             <td>20점</td>
             <td>항목4의 설명입니다.</td>
             <td>
-                <input type="text" id="ptEv_4"/><span>20</span>			
+                <input type="text" class="ptEv"/><span>20</span>			
             </td>
         </tr>
         <tr>
@@ -181,7 +182,7 @@ HTML
             <td>20점</td>
             <td>항목5의 설명입니다.</td>
             <td>
-                <input type="text" id="ptEv_5"/><span>20</span>			
+                <input type="text" class="ptEv"/><span>20</span>			
             </td>
         </tr>
         <tr>
