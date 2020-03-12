@@ -20,19 +20,11 @@
 
 
 
-### 학습 계획
+### Plans
 
 - ##### JAVA
 
   - ###### 객체지향의 사실과 오해 _ 조영호 
-
-  - ###### 오브젝트 : 코드로 이해하는 객체지향 설계  _ 조영호
-
-  - ###### 자바공부는 끝나지 않는다.. 
-
-  
-
-- ##### Spring framework
 
   - ###### 스프링 입문을 위한 자바 객체지향의 원리와 이해 _ 김종민 
 
@@ -40,11 +32,33 @@
 
     ###### 	(내용 정리 : [github repository](https://github.com/NickKies/TIL/tree/master/OopInSpring))
 
+  - ###### 오브젝트 : 코드로 이해하는 객체지향 설계  _ 조영호
+
+  - ###### Java 언어로 배우는 디자인 패턴 입문 _ Yuki Hiroshi
+
+  - ###### 리팩토링 : 코드 품질을 개선하는 객체지향 사고법 _ Martin Fowler
+
+  - ###### 자바공부는 끝나지 않는다.. 
+
+  
+
+- ##### Spring framework
+
+  - ###### ~~Just Spring(스프링 핵심 노트 : 빈과 컨테이너 중심으로 빠르게 배우는) _ Madhusuhan Konda~~
+
   - ###### ~~스프링부트2로 웹서비스 출시하기 _ 이동욱~~ 
 
     ###### 		(스프링부트로 시작해서 무중단 자동 배포까지 : [github repository](https://github.com/NickKies/springboot2-webservice))
 
   - ###### 스프링5 레시피 _ Deinum, Marten
+
+  
+
+- ##### React
+
+  - ###### 노마드코더 강의 => movie_app 
+
+    ###### (React 기초 : [github repository](https://github.com/NickKies/movie_app))
 
   
 
@@ -56,7 +70,6 @@
 
   
 
-  
 - ##### 토이프로젝트
 
   - ###### 깃허브로 블로그 만들기 (각종 api, 나만의 start structure 소개..?)
