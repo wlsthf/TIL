@@ -82,7 +82,7 @@ HTML
             <td>10점</td>
             <td>항목1의 설명입니다.</td>
             <td>
-                <input type="text" class="docEv"/><span>10</span>			
+                <input type="text" class="docEv"/><span>/10</span>			
             </td>
         </tr>
         <tr>
@@ -90,7 +90,7 @@ HTML
             <td>30점</td>
             <td>항목2의 설명입니다.</td>
             <td>
-                <input type="text" class="docEv"/><span>30</span>			
+                <input type="text" class="docEv"/><span>/30</span>			
             </td>
         </tr>
         <tr>
@@ -98,7 +98,7 @@ HTML
             <td>20점</td>
             <td>항목3의 설명입니다.</td>
             <td>
-                <input type="text" class="docEv"/><span>20</span>			
+                <input type="text" class="docEv"/><span>/20</span>			
             </td>
         </tr>
         <tr>
@@ -106,7 +106,7 @@ HTML
             <td>20점</td>
             <td>항목4의 설명입니다.</td>
             <td>
-                <input type="text" class="docEv"/><span>20</span>			
+                <input type="text" class="docEv"/><span>/20</span>			
             </td>
         </tr>
         <tr>
@@ -114,7 +114,7 @@ HTML
             <td>20점</td>
             <td>항목5의 설명입니다.</td>
             <td>
-                <input type="text" class="docEv"/><span>20</span>			
+                <input type="text" class="docEv"/><span>/20</span>			
             </td>
         </tr>
         <tr>
@@ -150,7 +150,7 @@ HTML
             <td>10점</td>
             <td>항목1의 설명입니다.</td>
             <td>
-                <input type="text" class="ptEv"/><span>10</span>			
+                <input type="text" class="ptEv"/><span>/10</span>			
             </td>
         </tr>
         <tr>
@@ -158,7 +158,7 @@ HTML
             <td>30점</td>
             <td>항목2의 설명입니다.</td>
             <td>
-                <input type="text" class="ptEv"/><span>30</span>			
+                <input type="text" class="ptEv"/><span>/30</span>			
             </td>
         </tr>
         <tr>
@@ -166,7 +166,7 @@ HTML
             <td>20점</td>
             <td>항목3의 설명입니다.</td>
             <td>
-                <input type="text" class="ptEv"/><span>20</span>			
+                <input type="text" class="ptEv"/><span>/20</span>			
             </td>
         </tr>
         <tr>
@@ -174,7 +174,7 @@ HTML
             <td>20점</td>
             <td>항목4의 설명입니다.</td>
             <td>
-                <input type="text" class="ptEv"/><span>20</span>			
+                <input type="text" class="ptEv"/><span>/20</span>			
             </td>
         </tr>
         <tr>
@@ -182,7 +182,7 @@ HTML
             <td>20점</td>
             <td>항목5의 설명입니다.</td>
             <td>
-                <input type="text" class="ptEv"/><span>20</span>			
+                <input type="text" class="ptEv"/><span>/20</span>			
             </td>
         </tr>
         <tr>
