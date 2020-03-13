@@ -26,7 +26,7 @@ prompt("promp test", "입력해주세요"); // "문구", "placholder"
 
 ```javascript
 function comfrimTest() {
-    var confirmFlag = comfrim("confirm test");
+    var confirmFlag = confrim("confirm test");
     if(confirmFlag) {
         alert("확인을 선택하셨습니다.") ;
     } else {
