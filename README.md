@@ -1,6 +1,6 @@
 # README
 
-## #기초부터-천천히 #기억보단-기록을 #기록후엔_복습을
+## #기초부터_천천히 #기억보단_기록을 #기록후엔_복습을
 
 
 
@@ -26,15 +26,17 @@
 
   - ###### 객체지향의 사실과 오해 _ 조영호 
 
-  - ###### 스프링 입문을 위한 자바 객체지향의 원리와 이해 _ 김종민 
+  - ###### 스프링 입문을 위한 자바 객체지향의 원리와 이해 _ 김종민  ( 객체지향 + 람다 )
 
-    ###### 		(객체지향의 이해와 스프링mvc를 이용한 게시판구축 + 람다 : [github repository](https://github.com/NickKies/OopInSpring))
+    ###### 		(코드 : [github repository](https://github.com/NickKies/OopInSpring))
 
     ###### 	(내용 정리 : [github repository](https://github.com/NickKies/TIL/tree/master/OopInSpring))
 
   - ###### 오브젝트 : 코드로 이해하는 객체지향 설계  _ 조영호
 
   - ###### Java 언어로 배우는 디자인 패턴 입문 _ Yuki Hiroshi
+
+  - ###### 자바와 JUnit을 활용한 실용주의 단위 테스트  : 클린 코드의 핵심, 단위 테스트로 소프트웨어 품질을 향상시킨다! _ Jeff Langr, Andy Hunt, Dave Thomas 
 
   - ###### 리팩토링 : 코드 품질을 개선하는 객체지향 사고법 _ Martin Fowler
 
@@ -65,6 +67,8 @@
 - ##### Algorithm    ([github repository](https://github.com/NickKies/Algorithm))
 
   - ###### ~~Heap sort까지 일단 보기~~
+
+  - ###### 자바로 배우는 핵심 자료구조와 알고리즘 : 기술 면접에 필요한 실용주의 자료구조와 알고리즘 _ Allen B. Downey
 
   - ###### 우선 매일 프로그래밍만 구독해서 주1회 학습 => ing...
 
