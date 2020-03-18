@@ -58,7 +58,7 @@
 
 - ##### React
 
-  - ###### 노마드코더 강의 => movie_app 
+  - ###### 노마드코더 강의 => movie_app (잠정 연기)
 
     ###### (React 기초 : [github repository](https://github.com/NickKies/movie_app))
 
@@ -90,14 +90,18 @@
 
   
 
-- ##### 토이프로젝트
+- ##### 토이 프로젝트
+
+  - ###### 서블릿기반 Airbnb clone을 Spring mvc로 구현
+
+    ###### (코드 : [github repository]())
 
   - ###### 깃허브로 블로그 만들기 (각종 api, 나만의 start structure 소개..?)
 
   - ###### web application for something... 
+
   
-  
-  
+
 - ##### 코딩인터뷰 완전분석 _ Gayle Laakmann McDowell  => 전반적인 지식 공부
 
 - ##### TIL Issues 활용규칙에 따른 학습  ([github repository](https://github.com/NickKies/TIL))
