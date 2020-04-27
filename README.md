@@ -32,6 +32,8 @@
 
   - ###### 오브젝트 : 코드로 이해하는 객체지향 설계  _ 조영호
 
+    ###### [(코드 : github repository)](https://github.com/NickKies/Object)
+
   - ###### Java 언어로 배우는 디자인 패턴 입문 _ Yuki Hiroshi
 
   - ###### 자바와 JUnit을 활용한 실용주의 단위 테스트  : 클린 코드의 핵심, 단위 테스트로 소프트웨어 품질을 향상시킨다! _ Jeff Langr, Andy Hunt, Dave Thomas 
