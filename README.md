@@ -32,7 +32,7 @@
 
   - ###### 오브젝트 : 코드로 이해하는 객체지향 설계  _ 조영호
 
-    ###### [(코드 : github repository)](https://github.com/NickKies/Object)
+    ###### (코드 : [github repository])(https://github.com/NickKies/Object)
 
   - ###### Java 언어로 배우는 디자인 패턴 입문 _ Yuki Hiroshi
 
