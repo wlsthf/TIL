@@ -23,6 +23,9 @@ public String OracleClob(Map map  , String key) throws Exception {
 		}
     
 		String result = out.toString();
+    
+    	// <br> 과 &nbsp 적용을 시켜줘야한다.
+         result.replaceAll("\n", "<br>").replaceAll("\r", "<br>").replaceAll("\t", "&nbsp;&nbsp;&nbsp;&nbsp;");
 
 		reader.close();
 
