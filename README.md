@@ -56,11 +56,19 @@
 
   
 
-- ##### React
+- ##### ~~React~~
 
-  - ###### 노마드코더 강의 => movie_app (잠정 연기)
+  - ###### ~~노마드코더 강의 => movie_app (잠정 연기)~~
 
-    ###### (React 기초 : [github repository](https://github.com/NickKies/movie_app))
+    ###### ~~(React 기초 : [github repository](https://github.com/NickKies/movie_app))~~
+  
+    
+
+- ##### Vue
+
+  - ###### 한전 프로젝트 요구사항... vue 공부
+
+    ###### (코드:[github repository](https://github.com/NickKies/vue))
 
   
 
@@ -91,10 +99,6 @@
   
 
 - ##### ToyProject
-
-  - ###### Servlet기반 Airbnb clone을 Spring mvc로 구현
-
-    ###### (코드 : [github repository]())
 
   - ###### 깃허브로 블로그 만들기 (각종 api, 나만의 start structure 소개..?)
 
