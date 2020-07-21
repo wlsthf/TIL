@@ -2,6 +2,36 @@
 
 
 
+### 쉬움이 버전
+
+```javascript
+$(function() {
+    $(":checkbox:first").click(function() {
+        controllAll($(this));
+    })
+});
+
+function controllAll($this) {
+    if( $this.is(":checked") ) {
+
+        $(":checkbox").each(function() {
+            $(this).prop("checked", true);
+        });
+
+    } else {
+        
+        $(":checkbox").each(function() {
+            $(this).prop("checked", false);
+        })
+        
+    }
+}
+```
+
+
+
+
+
 ### javascript
 
 ```javascript
