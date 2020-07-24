@@ -13,34 +13,31 @@ $(function() {
 
 // 날짜 validation
 function chkDate() {
-    var pre_start	= $("input[name=start_dt]").val(),
-        pre_end		= $("input[name=end_dt]").val();
-    
-    if  ( pre_start != "" && pre_end != "" ) {
-        var start	= Number(pre_start.replace(/-/g,"")),
-            end		= Number(pre_end.replace(/-/g,""));
-    
-        if ( start > end ) {
-
-            alert("종료일은 시작일과 같거나 이후로 선택하시기 바랍니다.");
-            return false;
-
-        } else {
-
-            return true;
-
-        }
-        
-    } else if ( pre_start == "" || pre_end == "" ) {
-
-        alert("시작일과 종료일을 모두 입력해 주시기 바랍니다.");
-        return false;
-        
-    }
-    
-    return true;
-    
-}
+		var pre_start	= $("input[name=start_dt]").val(),
+			pre_end		= $("input[name=end_dt]").val();
+		
+		if  ( pre_start != "" && pre_end != "" ) {
+			var start	= Number(pre_start.replace(/-/g,"")),
+				end		= Number(pre_end.replace(/-/g,""));
+		
+			if ( start > end ) {
+				alert("종료일은 시작일과 같거나 이후로 선택하시기 바랍니다.");
+				return false;
+			} else {
+				return true;
+			}
+			
+		} else if ( pre_start == "" && pre_end == "" ) {
+			
+			return true;
+			
+		} else {
+			
+			alert("시작일과 종료일을 모두 입력해 주시기 바랍니다.");
+			return false;
+			
+		}
+	}
 ```
 
 모든 - 를 지우고 싶을땐 정규식으로!
