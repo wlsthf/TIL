@@ -49,8 +49,8 @@ function chkDate() {
 html
 
 ```html
-<input type="date" name="start" max="9999-12-31">
+<input type="date" name="start_dt" max="9999-12-31">
 <span class="input-group-text">~</span>
-<input type="date" name="end" max="9999-12-31">
+<input type="date" name="end_dt" max="9999-12-31">
 ```
 
