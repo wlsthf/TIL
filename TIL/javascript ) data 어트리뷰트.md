@@ -13,13 +13,41 @@
 
 
 
+### 호출
+
 ```javascript
 $(function() {
     $("#test > li").click(function() {
-        var first = data("aaa"),
-            second = data("aaaBbb"),
-            third = data("aaaBbbCcc");
+        var first = $(this).data("aaa"),
+            second = $(this).data("aaaBbb"),
+            third = $(this).data("aaaBbbCcc");
+        
+        // 혹은
+        var one = $(this).dataset.aaa,
+            two = $(this).dataset.aaaBbb,
+            three = $(this).dataset.aaaBbbCcc;
     })
-})
+});
+```
+
+
+
+
+
+### 수정 
+
+```javascript
+$(function() {
+    $("#test > li").click(function() {
+        $(this).data("aaa", "변경된1");
+        $(this).data("aaaBbb", "변경된2"),
+        $(this).data("aaaBbbCcc", "변경된2");
+        
+        
+        $(this).dataset.aaa = "변경된1";
+        $(this).dataset.aaaBbb = "변경된2";
+        $(this).dataset.aaaBbbCcc = "변경된2";
+    })
+});
 ```
 
