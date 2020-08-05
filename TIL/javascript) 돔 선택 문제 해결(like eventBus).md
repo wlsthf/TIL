@@ -11,48 +11,47 @@ $(function(){
 
 
 function buildSomething() {
-			
+	// 데이터를 받아온다고 가정
+    var data = getData();
     var html = "";
 
-    for ( var i = 0; i < data.list1.length; i++ ) {
+    if ( data.list1 ) {
+        for ( var i = 0; i < data.list1.length; i++ ) {
 
-        html += '<div>';
-        html += '	<div class="panel-toolbar">';
-        html += '		<button type="button" class="btn_add">추가</button>';
-        html += '	</div>';
+            html += '<div>';
+            html += '	<div class="panel-toolbar">';
+            html += '		<button type="button" class="btn_add">추가</button>';
+            html += '	</div>';
 
-        html += '	<div>';
+            html += '	<div>';
 
-        if ( data.list2 ) {
+            if ( data.list2 ) {
 
-            for ( var j = 0; j < data.list2.length; j++ ) {
+                for ( var j = 0; j < data.list2.length; j++ ) {
 
-                if ( data.list1[i].idx1 == data.list2[j].idx1 ) {
+                    if ( data.list1[i].idx1 == data.list2[j].idx1 ) {
 
-                    html += '<div class="custom-control custom-checkbox" style="margin-bottom:7px;">';
+                        html += '<div class="custom-control custom-checkbox" style="margin-bottom:7px;">';
+                        html += '	<span>' + data.list2[j].nm + '</span>';
+                        html += '</div>';
 
-                    html += '	<span>' + data.list2[j].nm + '</span>';
-                    html += '</div>';
-
+                    }
                 }
             }
 
+            html += '	</div>';
+            html += '</div>';
+
         }
-
-        html += '	</div>';
-        html += '</div>';
-
-    }
+    }    
 
     $("#js-page-content").empty();
     $("#js-page-content").append(html);
-			
-		
 		
 	eventBus();
 		
 	}
-	
+
 	
 	
 function eventBus() {
