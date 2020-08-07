@@ -22,7 +22,7 @@
 
 - ##### JAVA
 
-  - ###### 객체지향의 사실과 오해 _ 조영호 
+  - ###### ~~객체지향의 사실과 오해 _ 조영호~~ 
 
   - ###### ~~스프링 입문을 위한 자바 객체지향의 원리와 이해 _ 김종민  ( 객체지향 + 람다 )~~
 
@@ -40,6 +40,8 @@
 
   - ###### 리팩토링 : 코드 품질을 개선하는 객체지향 사고법 _ Martin Fowler
 
+  - ##### 자바공부부터 제대로 다시  
+
   - ###### 자바공부는 끝나지 않는다.. 
 
   
@@ -52,17 +54,9 @@
 
     ###### 		(스프링부트로 시작해서 무중단 자동 배포까지 : [github repository](https://github.com/NickKies/springboot2-webservice))
 
-  - ###### 스프링5 레시피 _ Deinum, Marten
+  - ###### 스프링5와 Vue.js2로 시작하는 모던 웹 애플리케이션 개발
 
   
-
-- ##### ~~React~~
-
-  - ###### ~~노마드코더 강의 => movie_app (잠정 연기)~~
-
-    ###### ~~(React 기초 : [github repository](https://github.com/NickKies/movie_app))~~
-  
-    
 
 - ##### Vue
 
@@ -101,6 +95,8 @@
 - ##### ToyProject
 
   - ###### 깃허브로 블로그 만들기 (각종 api, 나만의 start structure 소개..?)
+
+  - ###### 파이썬으로 봇만들기 강의 
 
   - ###### web application for something... 
 
