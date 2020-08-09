@@ -49,7 +49,40 @@ public List ReadCsv(Map parameter) {
 csv파일 쓰기
 
 ```java
+public void WriteCsv() {     
+	//출력 스트림 생성
+    BufferedWriter bufWriter = null;
+    try {
+        bufWriter = Files.newBufferedWriter(Paths.get("주소"),Charset.forName("UTF-8"));
 
+        //csv파일 읽기
+        List<List<String>> allData = readCSV();
+
+        for(List<String> newLine : allData){
+        	List<String> list = newLine;
+        	for(String data : list){
+        		bufWriter.write(data);
+        		bufWriter.write(",");
+        	}
+        	//추가하기
+        	bufWriter.write("새로운 값");
+        	//개행코드추가
+        	bufWriter.newLine();
+        }
+    } catch(FileNotFoundException e) {
+    	e.printStackTrace();
+    } catch(IOException e) {
+    	e.printStackTrace();
+    } finally {
+    	try {
+    		if ( bufWriter != null ) {
+    			bufWriter.close();
+    		}
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    }
+}
 ```
 
 
