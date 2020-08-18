@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weahter</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+    $(function() {
+
+        var key = "키키키키킼",
+            baseDate = "20200818",
+            baseTime = "0800",
+            x = "55",
+            y = "127";
+        var apiURI = `http://apis.data.go.kr/1360000/VilageFcstInfoService/getUltraSrtNcst?serviceKey=${key}&numOfRows=10&pageNo=1&base_date=${baseDate}&base_time=${baseTime}&nx=${x}&ny=${y}&dataType=JSON`;
+        $.ajax({
+            url      : apiURI,
+            dataType : "json",
+            method   : "GET",
+            success  : function(data) {
+                console.log(data);
+            }
+        })
+
+    });
+
+
+
+
+</script>

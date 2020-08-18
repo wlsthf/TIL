@@ -5,8 +5,7 @@
 csv파일 읽기 => csv파일을 저장하고 파일을 불러와서 읽는다.
 
 ```java
-public List ReadCsv(Map parameter) {
-    String filePath = parameter.get("file_path");
+public List ReadCsv(String filePath) {
     //반환용 리스트
     List<List<String>> ret = new ArrayList<List<String>>();
     BufferedReader br = null;
@@ -22,7 +21,6 @@ public List ReadCsv(Map parameter) {
             String array[] = line.split(",");
             //배열에서 리스트 반환
             tmpList = Arrays.asList(array);
-            System.out.println(tmpList);
             ret.add(tmpList);
         }
     } catch(FileNotFoundException e) {
@@ -43,6 +41,14 @@ public List ReadCsv(Map parameter) {
 
 }
 ```
+
+
+
+
+
+
+
+
 
 
 
