@@ -11,7 +11,7 @@ public List ReadCsv(String filePath) {
     BufferedReader br = null;
 
     try {
-        br = Files.newBufferedReader(Paths.get(filePath));
+        br = Files.newBufferedReader(Paths.get(filePath), Charset.forName("EUC-KR"));
         //Charset.forName("UTF-8");
         String line = "";
 
