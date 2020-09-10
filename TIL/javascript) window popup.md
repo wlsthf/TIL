@@ -27,11 +27,18 @@ $("#btn_팝업").click(function() {
 ```javascript
 // 닫기버튼 클릭
 $("#btn_닫기").click(function() {
-    // 팝업 close
-    window.close();		
 
     // 자신의 팝업을 오픈한 부모 도큐먼트에 접근 -> $(opener.document).find("#")
     $(opener.document).find("#아이디").html("블라블라");
+    
+    //call back function call
+    try{
+        opener.부모창의함수도_사용가능CallBack();
+    }
+    catch(e){}
+
+    // 팝업 close
+    window.close();	
 });
 ```
 
