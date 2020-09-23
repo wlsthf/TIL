@@ -55,10 +55,10 @@ Map(String, List<Map<String, String>) mapListMap = new HashMap<>();
 List<Map<String, String> listMap = new ArrayList<>();
 
     
-String[] valueArr = { "값1", "값2" }    
+String[] valueArr = { "값1", "값2" };    
 
 for ( int i = 0; i < 2; i++ ) {
-    Map<String, String> tmpMap = new HashMap<>()
+    Map<String, String> tmpMap = new HashMap<>();
     tmpMap.put("value",valueArr[i]);    
     
     listMap.add(tmpMap);
@@ -88,4 +88,33 @@ if ( tmpList != null && tmpListMap.size() > 0 ) {
 
 4단계 listList
 
-..
+```java
+List<List<String>> listList = new ArrayList<>();
+List<String> list1 = {"값1", "값2"};
+List<String> list2 = {"값3", "값4"};
+
+listList.add(list1);
+listList.add(list2);
+
+
+// 꺼내기
+for ( int i = 0; i < listList.size(); i++ ) {
+    List tmpList = listList.get(i);
+    for ( int j = 0; j < tmpList; j++ ) {
+        String str = tmpList.get(j);
+        
+        System.out.println(str);
+    }
+}
+```
+
+
+
+
+
+5단계 listListMap
+
+```java
+
+```
+
