@@ -34,6 +34,14 @@ function upload() {
 		}, 
 		error		: function (e) {
 			console.log(e);
+		},		
+		// 로딩 표시
+		beforeSend	: function() {
+			로딩.show();
+		}, 
+		// 완료시 로딩창 제거
+		complete	: function() {
+			로딩.hide();
 		} 
 	});
 }
