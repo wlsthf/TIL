@@ -115,6 +115,16 @@ for ( int i = 0; i < listList.size(); i++ ) {
 5단계 listListMap
 
 ```java
+// 꺼낼때만..
+List<List<Map<String, String>>> listListMap = new ArrayList<>();
 
+for ( List<Map<String, String>> listMap : listListMap ) {
+    for ( Map<String,String> map : listMap ) {
+        map.get("something");
+        map.get("some other things..");
+    }    
+}
+
+// 돌며 돌며 돌며 돌아~
 ```
 
