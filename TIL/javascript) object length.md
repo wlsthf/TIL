@@ -1,4 +1,4 @@
-# jacascript) object length
+# javascript) object length
 
 
 
