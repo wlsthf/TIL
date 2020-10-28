@@ -150,6 +150,53 @@
 
 5. ## Hotfix Branch
 
+   ##### 출시 버전에서 발생한 버그를 수정 하는 브랜치
+
+   ###### 배포한 버전에 긴급하게 수정을 해야 할 필요가 있을 경우, ‘master’ 브랜치에서 분기하는 브랜치이다. ‘develop’ 브랜치에서 문제가 되는 부분을 수정하여 배포 가능한 버전을 만들기에는 시간도 많이 소요되고 안정성을 보장하기도 어려우므로 바로 배포가 가능한 ‘master’ 브랜치에서 직접 브랜치를 만들어 필요한 부분만을 수정한 후 다시 ‘master’브랜치에 병합하여 이를 배포해야 하는 것이다.
+
+   
+
+   ##### 1. 배포한 버전에 긴급하게 수정을 해야 할 필요가 있을 경우,
+
+   ###### 	-  ‘master’ 브랜치에서 hotfix 브랜치를 분기한다. (‘hotfix’ 브랜치만 master에서 바로 딸 수 있다.)
+
+   ##### 2. 문제가 되는 부분만을 빠르게 수정한다.
+
+   ###### 	- 다시 ‘master’ 브랜치에 병합(merge)하여 이를 안정적으로 다시 배포한다.
+
+   ###### 	- 새로운 버전 이름으로 태그를 매긴다.
+
+   ##### 3. hotfix 브랜치에서의 변경 사항은 ‘develop’ 브랜치에도 병합(merge)한다.
+
+   ###### 버그 수정만을 위한 ‘hotfix’ 브랜치를 따로 만들었기 때문에, 다음 배포를 위해 개발하던 작업 내용에 전혀 영향을 주지 않는다. ‘hotfix’ 브랜치는 master 브랜치를 부모로 하는 임시 브랜치라고 생각하면 된다.
+
+   ###### hotfix 브랜치 이름 정하기 -> [hotfix-* ] 형식을 추천 EX) hotfix-1.2.1
+
+   ###### hotfix 브랜치 생성 및 종료 과정
+
+   ```bash
+   // release 브랜치(hotfix-1.2.1)를 'master' 브랜치(유일!)에서 분기
+   $ git checkout -b hotfix-1.2.1 master
+   
+   /* ~ 문제가 되는 부분만을 빠르게 수정 ~ */
+   
+   /* 필요한 부분을 수정한 후 */
+   // 'master' 브랜치로 이동한다.
+   $ git checkout master
+   // 'master' 브랜치에 hotfix-1.2.1 브랜치 내용을 병합(merge)한다.
+   $ git merge --no-ff hotfix-1.2.1
+   // 병합한 커밋에 새로운 버전 이름으로 태그를 부여한다.
+   $ git tag -a 1.2.1
+   
+   /* 'hotfix' 브랜치의 변경 사항을 'develop' 브랜치에도 적용 */
+   // 'develop' 브랜치로 이동한다.
+   $ git checkout develop
+   // 'develop' 브랜치에 hotfix-1.2.1 브랜치 내용을 병합(merge)한다.
+   $ git merge --no-ff hotfix-1.2.1
+   ```
+
+   
+
 
 
 출처:[Heee's Development Blog](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)
