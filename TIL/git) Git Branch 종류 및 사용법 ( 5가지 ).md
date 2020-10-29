@@ -59,20 +59,20 @@
    - ##### feature 브랜치 생성 및 종료 과정
 
      ```bash
-     // feature 브랜치(feature/login)를 'develop' 브랜치('master' 브랜치에서 따는 것이 아니다!)에서 분기
+     #feature 브랜치(feature/login)를 'develop' 브랜치('master' 브랜치에서 따는 것이 아니다!)에서 분기
      $ git checkout -b feature/login develop
      
-     /* ~ 새로운 기능에 대한 작업 수행 ~ */
+     #~ 새로운 기능에 대한 작업 수행 ~
      
-     /* feature 브랜치에서 모든 작업이 끝나면 */
-     // 'develop' 브랜치로 이동한다.
+     #feature 브랜치에서 모든 작업이 끝나면
+     #'develop' 브랜치로 이동한다.
      $ git checkout develop
-     // 'develop' 브랜치에 feature/login 브랜치 내용을 병합(merge)한다.
+     #'develop' 브랜치에 feature/login 브랜치 내용을 병합(merge)한다.
      # --no-ff 옵션: 아래에 추가 설명
      $ git merge --no-ff feature/login
-     // -d 옵션: feature/login에 해당하는 브랜치를 삭제한다.
+     # -d 옵션: feature/login에 해당하는 브랜치를 삭제한다.
      $ git branch -d feature/login
-     // 'develop' 브랜치를 원격 중앙 저장소에 올린다.
+     # 'develop' 브랜치를 원격 중앙 저장소에 올린다.
      $ git push origin develop
      ```
 
@@ -123,26 +123,26 @@
    ##### release 브랜치 생성 및 종료 과정
 
    ```bash
-   // release 브랜치(release-1.2)를 'develop' 브랜치('master' 브랜치에서 따는 것이 아니다!)에서 분기
+   # release 브랜치(release-1.2)를 'develop' 브랜치('master' 브랜치에서 따는 것이 아니다!)에서 분기
    $ git checkout -b release-1.2 develop
    
-   /* ~ 배포 사이클이 시작 ~ */
+   # ~ 배포 사이클이 시작 ~ 
    
-   /* release 브랜치에서 배포 가능한 상태가 되면 */
-   // 'master' 브랜치로 이동한다.
+   # release 브랜치에서 배포 가능한 상태가 되면 
+   # 'master' 브랜치로 이동한다.
    $ git checkout master
-   // 'master' 브랜치에 release-1.2 브랜치 내용을 병합(merge)한다.
+   # 'master' 브랜치에 release-1.2 브랜치 내용을 병합(merge)한다.
    # --no-ff 옵션: 위의 추가 설명 참고
    $ git merge --no-ff release-1.2
    // 병합한 커밋에 Release 버전 태그를 부여한다.
    $ git tag -a 1.2
    
-   /* 'release' 브랜치의 변경 사항을 'develop' 브랜치에도 적용 */
-   // 'develop' 브랜치로 이동한다.
+   # 'release' 브랜치의 변경 사항을 'develop' 브랜치에도 적용 
+   # 'develop' 브랜치로 이동한다.
    $ git checkout develop
-   // 'develop' 브랜치에 release-1.2 브랜치 내용을 병합(merge)한다.
+   # 'develop' 브랜치에 release-1.2 브랜치 내용을 병합(merge)한다.
    $ git merge --no-ff release-1.2
-   // -d 옵션: release-1.2에 해당하는 브랜치를 삭제한다.
+   # -d 옵션: release-1.2에 해당하는 브랜치를 삭제한다.
    $ git branch -d release-1.2
    ```
 
@@ -175,23 +175,23 @@
    ###### hotfix 브랜치 생성 및 종료 과정
 
    ```bash
-   // release 브랜치(hotfix-1.2.1)를 'master' 브랜치(유일!)에서 분기
+   # release 브랜치(hotfix-1.2.1)를 'master' 브랜치(유일!)에서 분기
    $ git checkout -b hotfix-1.2.1 master
    
-   /* ~ 문제가 되는 부분만을 빠르게 수정 ~ */
+   # ~ 문제가 되는 부분만을 빠르게 수정 ~ 
    
-   /* 필요한 부분을 수정한 후 */
-   // 'master' 브랜치로 이동한다.
+   # 필요한 부분을 수정한 후 
+   # 'master' 브랜치로 이동한다.
    $ git checkout master
-   // 'master' 브랜치에 hotfix-1.2.1 브랜치 내용을 병합(merge)한다.
+   # 'master' 브랜치에 hotfix-1.2.1 브랜치 내용을 병합(merge)한다.
    $ git merge --no-ff hotfix-1.2.1
-   // 병합한 커밋에 새로운 버전 이름으로 태그를 부여한다.
+   # 병합한 커밋에 새로운 버전 이름으로 태그를 부여한다.
    $ git tag -a 1.2.1
    
-   /* 'hotfix' 브랜치의 변경 사항을 'develop' 브랜치에도 적용 */
-   // 'develop' 브랜치로 이동한다.
+   # 'hotfix' 브랜치의 변경 사항을 'develop' 브랜치에도 적용 
+   # 'develop' 브랜치로 이동한다.
    $ git checkout develop
-   // 'develop' 브랜치에 hotfix-1.2.1 브랜치 내용을 병합(merge)한다.
+   # 'develop' 브랜치에 hotfix-1.2.1 브랜치 내용을 병합(merge)한다.
    $ git merge --no-ff hotfix-1.2.1
    ```
 
