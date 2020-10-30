@@ -5,9 +5,41 @@
 
 
 ```javascript
+// 최초 페이지 로드시 실행되는 함수
 $(function(){
     buildSomething();
+    
+    init();
 });
+
+
+
+// 이벤트 리스너 등록
+function init() {
+    $("#btn").click(function() {
+    	handleBtnClick();
+	});
+}
+
+
+
+// 새롭게 추가된 돔에 대한 이벤트 리스너 등록
+function eventBusSomeThing() {
+    // 추가 버튼 클릭이벤트 추가
+    $(".btn_add").click(function() {
+        add($(this));
+    });
+
+    // .. buildSometiong 안에 관련된 이벤트 리스너들 추가
+
+}
+
+
+
+function handleBtnClick() {
+    console.log('버튼을 클릭했어요!');
+}
+
 
 
 function buildSomething() {
@@ -48,21 +80,9 @@ function buildSomething() {
     $("#js-page-content").empty();
     $("#js-page-content").append(html);
 		
-	eventBus();
+	eventBusSomeThing();
 		
-	}
-
-	
-	
-function eventBus() {
-
-    // 추가 버튼 클릭이벤트 추가
-    $(".btn_add").click(function() {
-        add($(this));
-    });
-
-    // .. buildSometiong 안에 관련된 이벤트 리스너들 추가
-
 }
+
 ```
 
