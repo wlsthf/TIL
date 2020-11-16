@@ -38,3 +38,6 @@ WHERE 컬럼명 LIKE '%'+ #{검색어} +'%'
 WHERE 컬럼명1 LIKE CONCAT('%', #{검색어}, '%') OR 컬럼명2 LIKE CONCAT('%', #{검색어}, '%') OR 컬럼명3 LIKE CONCAT('%', #{검색어}, '%')
 ```
 
+
+
+* LIKE의 반대는 NOT LIKE
