@@ -1,4 +1,4 @@
-# SQL ) INSERT or UPDATE 
+# SQL ) INSERT or UPDATE ( DUPLICATE )
 
 
 
