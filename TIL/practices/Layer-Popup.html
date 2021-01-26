@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layer Popup</title>
+    <style>
+        #popUp1, #popUp2 {
+            width:300px; /*팝업창의 가로크기*/
+            height: 400px; /*팝업창의 세로크기*/
+            background: gainsboro; /*팝업의 배경색상*/
+            color: black; /*팝업의 글자 색상*/
+            position: absolute; /*팝업의 위치 속성*/
+            top: 10px;
+            left: 100px;
+            text-align: center;
+            border: 2px solid #000000;
+            display: none;
+            z-index: 100;
+        }
+
+        #popUp2 {
+            display: block;
+        }
+
+
+        .body {
+            width: 800px;
+            text-align: center;
+            vertical-align: center;
+            margin: 0 auto;
+        }
+        #popUp1 div, #popUp2 div {
+            margin: 30px;
+        }
+
+        #close1, #close2, label {
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+        //세션에 쿠키 설정*
+        function setCookie(name, value, expiredays) {
+            var todayDate = new Date();
+
+            todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
+            if ( todayDate > new Date() ) {
+                expiredays = expiredays - 1;
+            }
+
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path =/; expires=" + todayDate.toUTCString() + ";" //toGMTString()은 사용하지 않음.
+        }
+    </script>
+</head>
+<body>
+<div class="body">
+    <h1>본문 내용입니다.</h1>
+    <input type="button" id="pop1" value="팝업">
+</div>
+
+
+
+<div id="popUp1"> <!-- body 가장 아래부분에 div 추가 -->
+    <div>팝업 내용입니다. </div>
+    <div id="close1">close</div>
+</div>
+
+<div id="popUp2"><!--오늘하루 팝업-->
+    <div>오늘하루 보지않음 팝업</div>
+    <div class="close">
+        <form name="pop_form">
+            <div id="check">
+                <label for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <span>오늘하루 보지 않기</span>
+                </label>
+            </div>
+            <div id="close2">Close</div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script>
+
+$(document).ready(function() {
+
+    //팝업창1 보여주기
+    $("#pop1").click(function() {
+        $("#popUp1").show();
+    });
+
+    //close
+    $("#close1").click(function() {
+        $("#popUp1").hide();
+    });
+
+
+
+
+    // 팝업창2 close
+    $("#close2").click(function() {
+        if($('input:checkbox[id="checkbox"]').is(":checked")) {
+            setCookie("mainDiv","done",1);
+        }
+        $("#popUp2").hide();
+    });
+
+});
+
+// 쿠키에 따른 팝업창 노출여부
+cookieData = document.cookie;
+if(cookieData.indexOf("mainDiv = done") < 0) {
+    $("#popUp2").hide();
+} else {
+    $("#popUp2").show();
+}
+
+
+</script>
