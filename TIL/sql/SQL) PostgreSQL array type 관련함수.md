@@ -29,5 +29,24 @@ WITH tmp as (
  -- 중복제거, 정렬
  array_agg(DISTINCT col2 ORDER BY col2)
 	
+-- row들을 json객체로 만들기
+json_object_agg(name, value)
+
+-- ex)
+SELECT
+	year
+	,month
+	,JSON_OBJECT_AGG(day, timeList) AS dateList
+FROM 
+(
+	SELECT
+		TO_CHAR(dt, 'yyyy')                AS year
+		,TO_CHAR(dt, 'mm')                 AS month
+		,TO_CHAR(dt, 'dd')                 AS day
+		,ARRAY_AGG(TO_CHAR(dt, 'hh24:mi')) AS timeList
+	FROM table
+	GROUP BY TO_CHAR(dt, 'yyyy'), TO_CHAR(dt, 'mm'), TO_CHAR(dt, 'dd')
+) a
+GROUP BY year, month
 ```
 
