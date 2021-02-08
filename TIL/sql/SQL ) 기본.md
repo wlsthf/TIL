@@ -307,7 +307,7 @@ FROM
 
 ##### ex) CAR  TABLE
 
-![tbl_car](C:\Users\KYS\Desktop\feed\png\tbl_car.png)
+
 
 #### 1. 회사별 차량수
 
@@ -372,13 +372,13 @@ INNER JOIN, LEFT OUTER JOIN
 
 ##### CONTENT TABLE
 
-![K-001](C:\Users\KYS\Desktop\feed\png\K-001.png)
+
 
 
 
 ##### CONTENT_COMMENT  TABLE
 
-![K-002](C:\Users\KYS\Desktop\feed\png\K-002.png)
+
 
 
 
