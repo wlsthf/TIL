@@ -58,7 +58,7 @@ netstat -ntlp | grep sshd
 systemctl start tomcat
 systemctl start geoserver
 
-# 실행이 안된다면 해당 디렉토리로 가서 실행파일 실팽
+# 실행이 안된다면 해당 디렉토리로 가서 실행파일 실행
 cd /some/thing/dir/bin
 ./startup.sh
 
