@@ -120,11 +120,11 @@ Javascript
 ```javascript
 document.getElementById("menu").addEventListener("click", function(e) {
   var target = e.target;
-  if (target.id === "file") {
+  if ( target.id === "file" ) {
     // 파일 메뉴 동작
-  } else if (target.id === "edit") {
+  } else if ( target.id === "edit" ) {
     // 편집 메뉴 동작
-  } else if (target.id === "view") {
+  } else if ( target.id === "view" ) {
     // 보기 메뉴 동작
   }
 });
@@ -139,11 +139,11 @@ jQuery
 ```javascript
 // 이벤트 위임1
 $("#menu").on("click", "li button", function() {
-  if (this.id === "file") {
+  if ( this.id === "file" ) {
     // 파일 메뉴 동작
-  } else if (target.id === "edit") {
+  } else if ( this.id === "edit" ) {
     // 편집 메뉴 동작
-  } else if (target.id === "view") {
+  } else if ( this.id === "view" ) {
     // 보기 메뉴 동작
   }
 });
@@ -161,7 +161,7 @@ $("#menu").on("click", "#view", function() {
 
 // 이벤트 위임3
 $("#menu li button").click(function() {
-    
+    $(this).trigger("myCustomEvent");
 });
 $("#menu").on("myCustomEvent", "#file", function() {
   // 파일 메뉴 동작
