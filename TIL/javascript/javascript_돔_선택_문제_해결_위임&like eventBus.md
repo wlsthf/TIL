@@ -148,6 +148,8 @@ $("#menu").on("click", "li button", function() {
   }
 });
 
+
+
 // 이벤트 위임2
 $("#menu").on("click", "#file", function() {
   // 파일 메뉴 동작
@@ -159,18 +161,20 @@ $("#menu").on("click", "#view", function() {
   // 보기 메뉴 동작
 });
 
+
+
 // 이벤트 위임3
 $("#menu li button").click(function() {
     $(this).trigger("myCustomEvent");
 });
-$("#menu").on("myCustomEvent", "#file", function() {
-  // 파일 메뉴 동작
-});
-$("#menu").on("myCustomEvent", "#edit", function() {
-  // 편집 메뉴 동작
-});
-$("#menu").on("myCustomEvent", "#view", function() {
-  // 보기 메뉴 동작
+$("#menu").on("myCustomEvent", "li button", function() {
+    if ( this.id === "file" ) {
+        // 파일 메뉴 동작
+    } else if ( this.id === "edit" ) {
+        // 편집 메뉴 동작
+    } else if ( this.id === "view" ) {
+        // 보기 메뉴 동작
+    }
 });
 ```
 
