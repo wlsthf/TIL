@@ -7,7 +7,8 @@ var defaultParams = {
     'BGCOLOR'     : '0xFFFFFF',
     'EXCEPTIONS'  : 'BLANK',
     'VIEWPARAMS'  : viewParam,
-    'CQL_FILTER'  : "frcst_br_cd LIKE '11%'"
+    'CQL_FILTER'  : "컬럼명 LIKE '썸띵%'"
 },
 ```
 
+ 다른 조건절 문법 사용가능!
