@@ -1,7 +1,6 @@
 # Blockchain
 
 - Consensus mechanism
-- Proof of work
 - Proof of stake
 
 
@@ -22,7 +21,7 @@ let blockchain = {
 let keysOfBlockchain = Object.keys(blockchain);
 blockchain[keysOfBlockchain[keysOfBlockchain.length - 1] + 1] = 
     // previous hash
-    [hash(keysOfBlockchain[keysOfBlockchain.length - 2],
+    [Nonce, hash(keysOfBlockchain[keysOfBlockchain.length - 2],
           // new hash
           blockchain[keysOfBlockchain[keysOfBlockchain.length - 2]]),
      	  // new data
@@ -32,3 +31,11 @@ blockchain[keysOfBlockchain[keysOfBlockchain.length - 1] + 1] =
 // Deterministic
 function hash(preHash, data) {return encryption(preHash + data);}
 ```
+
+
+
+
+
+Proof of work
+
+data of block , nonce (difficulty)
